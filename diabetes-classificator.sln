@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "diabetes-classificator", "diabetes-classificator\diabetes-classificator.csproj", "{CA36D281-B932-4607-9FF2-E7F37EDE7720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{1C02BD84-039A-49B5-A19E-A999082C713E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{4BC3B38C-A427-4DE4-BFC7-1B02B4D57B9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA36D281-B932-4607-9FF2-E7F37EDE7720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA36D281-B932-4607-9FF2-E7F37EDE7720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA36D281-B932-4607-9FF2-E7F37EDE7720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA36D281-B932-4607-9FF2-E7F37EDE7720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C02BD84-039A-49B5-A19E-A999082C713E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C02BD84-039A-49B5-A19E-A999082C713E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C02BD84-039A-49B5-A19E-A999082C713E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C02BD84-039A-49B5-A19E-A999082C713E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC3B38C-A427-4DE4-BFC7-1B02B4D57B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC3B38C-A427-4DE4-BFC7-1B02B4D57B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC3B38C-A427-4DE4-BFC7-1B02B4D57B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC3B38C-A427-4DE4-BFC7-1B02B4D57B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

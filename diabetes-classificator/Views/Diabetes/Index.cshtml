@@ -1,0 +1,64 @@
+@{
+    ViewData["Title"] = "Patient Form";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Evaluate patient diabetes condition</h2>
+            <p class="fs-4">
+                This demo uses KNN classification trained with
+                <a href="https://www.kaggle.com/datasets/mathchi/diabetes-data-set" target="_blank">Kaggle data</a>
+                to predict if a patient has diabetes or not.
+            </p>
+            <p class="fst-italic fs-5">See also the <a href="https://colab.research.google.com/drive/17NkvpoHwZsHFu94mBwTTmrsDaAJ_Btg1#scrollTo=KKPth05i9DUo">data processing notebook</a>.</p>
+        </div>
+    </div>
+    <div class="mt-5">
+        <div class="row">
+            <div class="col">
+                <form asp-action="Evaluate" method="post">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="pregnancies" class="form-label">Pregnancies</label>
+                            <input type="number" class="form-control" id="pregnancies" name="Pregnancies" required step="1" min="0">
+                            <span id="pregnanciesHelp" class="form-text">Number of times pregnant</span>
+                        </div>
+                        <div class="col-5">
+                            <label for="glucose" class="form-label">Glucose</label>
+                            <input type="number" class="form-control" id="glucose" name="Glucose" required min="0">
+                            <span id="glucoseHelp" class="form-text">Plasma glucose concentration a 2 hours in an oral glucose tolerance test</span>
+                        </div>
+                        <div class="col-4">
+                            <label for="bloodPressure" class="form-label">Blood Pressure</label>
+                            <input type="number" class="form-control" id="bloodPressure" name="BloodPressure" required min="0">
+                            <span id="bloodPressureHelp" class="form-text">Diastolic blood pressure (mm Hg)</span>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <label for="insulin" class="form-label">Insulin</label>
+                            <input type="number" class="form-control" id="insulin" name="Insulin" required min="0">
+                            <span id="insulinHelp" class="form-text">2-Hour serum insulin (mu U/ml)</span>
+                        </div>
+                        <div class="col-4">
+                            <label for="bmi" class="form-label">BMI</label>
+                            <input type="number" class="form-control" id="bmi" name="Bmi" step="0.1" required min="0">
+                            <span id="bmiHelp" class="form-text">Body mass index (weight in kg/(height in m)^2)</span>
+                        </div>
+                        <div class="col-4">
+                            <label for="age" class="form-label">Age</label>
+                            <input type="number" class="form-control" id="age" name="Age" required step="1" min="0">
+                            <span id="ageHelp" class="form-text">Age in years</span>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary" id="evaluateButton">Evaluate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
