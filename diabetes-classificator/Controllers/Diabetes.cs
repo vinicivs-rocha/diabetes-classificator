@@ -6,17 +6,20 @@ namespace diabetes_classificator.Controllers;
 
 public class DiabetesController(EvaluatePatient evaluatePatient, CalculateAccuracy calculateAccuracy) : Controller
 {
-    // GET: Index
+    private readonly string _accuracy = (calculateAccuracy.Execute() * 100).ToString("F2");
+    
     public IActionResult Index()
     {
-        ViewData["Accuracy"] = (calculateAccuracy.Execute() * 100).ToString("F2");
+        ViewData["Accuracy"] = _accuracy;
         return View();
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public string Evaluate([Bind("Pregnancies,Glucose,BloodPressure,Insulin,Bmi,Age")] Patient patient)
+    public IActionResult Evaluate([Bind("Pregnancies,Glucose,BloodPressure,Insulin,Bmi,Age")] Patient patient)
     {
-        return ((DiabetesOutcome)evaluatePatient.Execute(patient)).ToString();
+        ViewData["Accuracy"] = _accuracy;
+        ViewData["Result"] = (DiabetesOutcome)evaluatePatient.Execute(patient);
+        return View("Result");
     }
 }
